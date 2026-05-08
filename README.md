@@ -19,7 +19,13 @@ I wanted a third choice:
 This is an implementation of the third choice.
 
 # Prerequisites
-To run this, you still need to install the reporting run-time. You can get it from nuget. It is called Microsoft.ReportViewer. You need Common and either NETCore or the ole WebForms.
+To run this, you still need to install the reporting run-time. You can get it from nuget. 
+* Microsoft.Report.Viewer - 11.0.0
+
+Report.Viewer 11 contains these required dll files. This csproj file references both of them but you might need to remove and re-add to refresh the path or if the version changes at some future date. Project, References, Add Reference..., Browse, /packages/MRV11/lib/net/*.dll.
+* Microsoft.ReportViewer.WebForms - Newest (or 11.0.0)
+* Microsoft.ReportViewer.Common - Newest (or 11.0.0)
+
 All of my reports were made Visual Studio using the VS Extension called "Microsoft RDLC Report Designer" or one of the editors that comes with SSRS, etc.
 
 # Strategy
